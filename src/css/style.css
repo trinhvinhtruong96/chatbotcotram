@@ -104,7 +104,7 @@
 /******************************/
 
 .section-hero {
-    margin-top: 60px;
+    margin-top: 100px;
     background-color: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
 }
@@ -236,8 +236,8 @@
 }
 
 .step-img-box::before {
-    width: 60%;
-    padding-bottom: 60%;
+    width: 100%;
+    padding-bottom: 100%;
     background-color: #fdf2e9;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .step-img {
-    width: 35%;
+    width: 80%;
 }
 
 /******************************/
@@ -382,7 +382,8 @@
 }
 
 .testimonial-img {
-    width: 6.4rem;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 1.2rem;
 }
@@ -425,13 +426,19 @@
 
 /******************************/
 
+.rcb-chat-window {
+    height: 700px !important;
+    width: 500px !important;
+    margin-inline: auto !important;
+}
+
 .section-pricing {
     padding: 9.6rem 0;
 }
 
 .pricing-plan {
     border-radius: 11px;
-    width: 75%;
+    margin-inline: auto;
 }
 
 .pricing-plan--starter {
@@ -440,13 +447,6 @@
     padding: 4.6rem;
 }
 
-.pricing-plan--complete {
-    justify-self: start;
-    background-color: #fdf2e9;
-    padding: 4.8rem;
-    position: relative;
-    overflow: hidden;
-}
 
 .pricing-plan--complete::after {
     content: "Best value";
@@ -612,7 +612,7 @@
 /* FOOTER SECTION */
 /******************************/
 .footer {
-    padding: 12.8rem 0;
+    padding: 75px 0;
     border-top: 1px solid #eee;
 }
 
