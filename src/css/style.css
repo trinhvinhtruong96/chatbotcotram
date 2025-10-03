@@ -427,8 +427,8 @@
 /******************************/
 
 .rcb-chat-window {
-    height: 700px !important;
-    width: 500px !important;
+    height: 60vh !important;
+    width: 100% !important;
     margin-inline: auto !important;
 }
 
