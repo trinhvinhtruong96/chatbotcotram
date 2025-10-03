@@ -70,13 +70,13 @@ function App() {
 							thành nhân cách, trí tuệ và cảm xúc của trẻ. Vì thế, Trúc Đào luôn tạo dựng một môi trường
 							học tập và vui chơi an toàn, ấm áp như một gia đình thứ hai.
 						</p>
-						<a href="#cta" className="btn btn--full margin-right-sm">Theo dõi nhà trường</a>
+						<a href="https://www.facebook.com/truong.trucdao/photos" className="btn btn--full margin-right-sm">Theo dõi nhà trường</a>
 						<a href="#how" className="btn btn--outline">Khám phá &darr;</a>
 					</div>
 					<div className="hero-img-box">
 						<img
 						    src={coThuImg}
-						    alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+						    alt="Co thu"
 						    className="hero-img"
 						/>
 					</div>
