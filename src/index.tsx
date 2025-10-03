@@ -1,4 +1,7 @@
 import "./index.css";
+import "./css/style.css"
+import "./css/queries.css"
+import "./css/general.css"
 import App from "./App";
 import { createRoot } from "react-dom/client";
 
