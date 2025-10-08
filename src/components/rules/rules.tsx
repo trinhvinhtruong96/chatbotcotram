@@ -1,4 +1,6 @@
 import ngoaikhoaIMG from "../../img/ngoaikhoa.jpg";
+import ngoaikhoa1IMG from "../../img/ngoaikhoa1.jpg";
+import ngoaikhoa2IMG from "../../img/ngoaikhoa2.jpg";
 
 export const Rules = () => {
 	return (
@@ -16,16 +18,14 @@ export const Rules = () => {
 						Bé được học tập một cách bài bản, khoa học.
 					</h3>
 					<p className="step-description">
-						Never again waste time thinking about what to eat!
-						Omnifood AI will create a 100% personalized weekly
-						meal plan just for you. It makes sure you get all
-						the nutrients and vitamins you need, no matter what
-						diet you follow!
+						Bé không chỉ được học những kiến thức cơ bản phù hợp với lứa tuổi, mà còn được rèn luyện tư duy logic, khả năng quan sát, phân tích và giải quyết vấn đề. Các hoạt động học tập được thiết kế đan xen giữa lý thuyết và thực hành, giúp bé vừa hiểu sâu kiến thức, vừa biết cách áp dụng vào thực tế.
+
+						Ngoài ra, môi trường học tập của bé còn được tổ chức theo hướng khuyến khích khám phá, sáng tạo và tự tin thể hiện bản thân, giúp bé phát triển toàn diện cả về trí tuệ, cảm xúc và kỹ năng xã hội.
 					</p>
 				</div>
 				<div className="step-img-box">
 					<img
-						src={ngoaikhoaIMG}
+						src={ngoaikhoa1IMG}
 						alt="iPhone app preferences selection screen"
 						className="step-img"
 					/>
@@ -44,9 +44,9 @@ export const Rules = () => {
 						Tham gia các hoạt động vui chơi, ngoại khóa
 					</h3>
 					<p className="step-description">
-						Once per week, approve the meal plan generated for
-						you by Omnifood AI. You can change ingredients, swap
-						entire meals, or even add your own recipes.
+						Bé được tham gia các hoạt động vui chơi và ngoại khóa đa dạng, giúp việc học không chỉ gói gọn trong sách vở mà còn mở rộng ra thế giới xung quanh.
+
+						Thông qua các hoạt động này, bé có cơ hội rèn luyện thể chất, phát triển kỹ năng giao tiếp, hợp tác và tinh thần đồng đội. Những trò chơi mang tính sáng tạo, các buổi tham quan, dã ngoại hay hoạt động nhóm đều giúp bé học cách quan sát, khám phá và tự tin thể hiện bản thân trong nhiều tình huống khác nhau.
 					</p>
 				</div>
 
@@ -57,15 +57,14 @@ export const Rules = () => {
 						Thưởng thức bữa ăn thơm ngon, dinh dưỡng
 					</h3>
 					<p className="step-description">
-						Best chefs in town will cook your selected meal
-						every day, and we will deliver it to your door
-						whenever works best for you. You can change delivery
-						schedule and address daily!
+						Bé được thưởng thức những bữa ăn thơm ngon, đầy đủ dinh dưỡng, được chuẩn bị kỹ lưỡng để đảm bảo cả hương vị hấp dẫn lẫn giá trị dinh dưỡng cân bằng.
+
+						Các bữa ăn được xây dựng theo thực đơn khoa học, đa dạng thực phẩm, giúp bé hấp thu đầy đủ các nhóm chất cần thiết như chất đạm, tinh bột, chất béo, vitamin và khoáng chất. Thức ăn luôn được chế biến hợp khẩu vị trẻ nhỏ, trình bày đẹp mắt, kích thích bé ăn ngon miệng và hình thành thói quen ăn uống lành mạnh.
 					</p>
 				</div>
 				<div className="step-img-box">
 					<img
-						src={ngoaikhoaIMG}
+						src={ngoaikhoa2IMG}
 						alt="iPhone delivery screen"
 						className="step-img"
 					/>
