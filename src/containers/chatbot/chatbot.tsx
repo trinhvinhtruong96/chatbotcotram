@@ -48,9 +48,20 @@ export const MyChatBot = () => {
 				"Hoạt động ngoại khóa",
 			],
 			path: async (params) => {
-				if (params.userInput === "Không") {
+				if (params.userInput === "Không" || params.userInput === "Kết thúc") {
 					return "end";
 				}
+
+				if (params.userInput === "Lịch học của bé") {
+					return "calendar";
+				}
+				if (params.userInput === "Thực đơn hàng ngày") {
+					return "menu";
+				}
+				if (params.userInput === "Hoạt động ngoại khóa") {
+					return "activities";
+				}
+
 				return "start";
 			},
 		},
