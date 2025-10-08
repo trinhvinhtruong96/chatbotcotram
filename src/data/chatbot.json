@@ -1,0 +1,21 @@
+{
+  "start": {
+    "message": "Xin chào bạn muôn sử dụng chatbot của chúng tôi?",
+    "options": [
+      "Tra cứu thông tin",
+      "Nói chuyện với tư vấn viên AI"
+    ],
+    "next": {
+      "Tra cứu thông tin": "info",
+      "Nói chuyện với tư vấn viên AI": "chatgpt"
+    },
+    "path": "openai"
+  },
+  "info": {
+    "message": "Ứng dụng có các tính năng: 1) Quản lý chatbot 2) Tùy biến flow 3) Ghi lịch sử. Tiếp tục?",
+    "options": ["Quay lại", "Thoát"],
+    "next": {
+      "Quay lại": "start",
+      "Thoát": "goodbye"
+    }
+  }}

@@ -1,5 +1,6 @@
 import LlmConnector, {OpenaiProvider} from "@rcb-plugins/llm-connector";
 import ChatBot, {type Flow} from "react-chatbotify";
+import intentsData from '../../data/chatbot.json';
 
 export const MyChatBot = () => {
 	// openai api key, required since we're using 'direct' mode for testing
@@ -12,32 +13,39 @@ export const MyChatBot = () => {
 	// @ts-ignore
 	const flow: Flow = {
 		start: {
-			message: "Chào cô Châm, cô Châm muốn bắt đầu sử dụng chat bot chưa",
-			options: ["Bắt đầu!"],
-			chatDisabled: false,
+			message: "Xin chào, bạn muốn tra cứu thông tin gì?",
+			chatDisabled: true,
+			options: [
+				"Lịch học của bé",
+				"Thực đơn hàng ngày",
+				"Hoạt động ngoại khóa",
+			],
 			path: async (params) => {
-				if (!apiKey) {
-					await params.simulateStreamMessage("You have not set your API key!");
-					return "start";
+				if (params.userInput === "Lịch học của bé") {
+					return "calendar";
 				}
-				await params.simulateStreamMessage("Hỏi thông tin về trường mầm non Trúc Đào!");
-				return "openai";
+
+
+				return "start";
 			},
 		},
-		openai: {
-			//@ts-ignore
-			llmConnector: {
-				// provider configuration guide:
-				// https://github.com/React-ChatBotify-Plugins/llm-connector/blob/main/docs/providers/OpenAI.md
-				provider: new OpenaiProvider({
-					mode: 'direct',
-					model: 'gpt-4.1-nano',
-					responseFormat: 'stream',
-					apiKey: apiKey,
-				}),
-				outputType: 'character',
+		calendar: {
+			message: "Bé học từ thứ Hai đến thứ Sáu, buổi sáng từ 7h30 đến 11h00 và buổi chiều từ 14h00 đến 16h30.\n" +
+				"Cuối tuần bé được nghỉ để vui chơi cùng gia đình nhé! \n Bạn muốn hỏi gì nữa không?",
+			options: [
+				"Có",
+				"Không",
+			],
+			path: async (params) => {
+				if (params.userInput === "Không") {
+					return "end";
+				}
+				return "start";
 			},
 		},
+		end: {
+			message: "Cảm ơn bạn đã quan tâm! Chúc bạn một ngày vui vẻ!",
+		}
 	};
 
 	return (

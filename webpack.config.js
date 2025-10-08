@@ -69,7 +69,7 @@ module.exports = {
 
   // File extensions to support resolving
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".css"],
+    extensions: [".js", '.json', ".jsx", ".ts", ".tsx", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({

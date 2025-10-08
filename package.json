@@ -43,6 +43,8 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "gh-pages": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
+    "install": "^0.13.0",
+    "json-loader": "^0.5.7",
     "prettier": "^3.3.3",
     "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",
@@ -52,5 +54,6 @@
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
-  }
+  },
+  "packageManager": "pnpm@10.12.1+sha256.889bac470ec93ccc3764488a19d6ba8f9c648ad5e50a9a6e4be3768a5de387a3"
 }
