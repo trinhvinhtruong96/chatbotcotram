@@ -1,21 +1,23 @@
 {
   "start": {
-    "message": "Xin chào bạn muôn sử dụng chatbot của chúng tôi?",
+    "message": "Xin chào, bạn muốn tra cứu thông tin gì?",
+    "chatDisabled": true,
     "options": [
-      "Tra cứu thông tin",
-      "Nói chuyện với tư vấn viên AI"
+      "Lịch học của bé",
+      "Thực đơn hàng ngày",
+      "Hoạt động ngoại khóa"
     ],
-    "next": {
-      "Tra cứu thông tin": "info",
-      "Nói chuyện với tư vấn viên AI": "chatgpt"
-    },
-    "path": "openai"
+    "path": "async (params) => { if (params.userInput === 'Lịch học của bé') { return 'calendar'; } return 'start'; }"
   },
-  "info": {
-    "message": "Ứng dụng có các tính năng: 1) Quản lý chatbot 2) Tùy biến flow 3) Ghi lịch sử. Tiếp tục?",
-    "options": ["Quay lại", "Thoát"],
-    "next": {
-      "Quay lại": "start",
-      "Thoát": "goodbye"
-    }
-  }}
+  "calendar": {
+    "message": "Bé học từ thứ Hai đến thứ Sáu, buổi sáng từ 7h30 đến 11h00 và buổi chiều từ 14h00 đến 16h30.\nCuối tuần bé được nghỉ để vui chơi cùng gia đình nhé! \nBạn muốn hỏi gì nữa không?",
+    "options": [
+      "Có",
+      "Không"
+    ],
+    "path": "async (params) => { if (params.userInput === 'Không') { return 'end'; } return 'start'; }"
+  },
+  "end": {
+    "message": "Cảm ơn bạn đã quan tâm! Chúc bạn một ngày vui vẻ!"
+  }
+}
