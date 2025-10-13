@@ -1,5 +1,7 @@
 import React from "react";
 import cotramIMG from "../../img/cotram.png";
+import cothuIMG from "../../img/cothu.jpg";
+import cohiepIMG from "../../img/cohiep.png";
 import activityIMG from "../../img/activity1.jpg";
 import activity2IMG from "../../img/act2.jpg";
 import activity3IMG from "../../img/act3.jpg";
@@ -59,7 +61,7 @@ export const Activities = () => {
 						<figure className="testimonial">
 							<img
 								className="testimonial-img"
-								src={cotramIMG}
+								src={cothuIMG}
 								alt=" Ben Hadley"
 							/>
 							<blockquote className="testimonial-text">
@@ -80,7 +82,7 @@ export const Activities = () => {
 						<figure className="testimonial">
 							<img
 								className="testimonial-img"
-								src={cotramIMG}
+								src={cohiepIMG}
 								alt="Steve Miller"
 							/>
 							<blockquote className="testimonial-text">

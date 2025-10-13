@@ -3,6 +3,7 @@ import ChatBot, {type Flow} from "react-chatbotify";
 import intentsData from '../../data/chatbot.json';
 import MenuOfTheDay from "./MenuOfTheDay";
 import ExtracurricularActivities from "./ExtracurricularActivities";
+import MonthlyActivityCalendar from "./Calendar";
 
 export const MyChatBot = () => {
 	// openai api key, required since we're using 'direct' mode for testing
@@ -19,14 +20,14 @@ export const MyChatBot = () => {
 			chatDisabled: true,
 			options: [
 				"Lịch học của bé",
-				"Thực đơn hàng ngày",
+				"Thực đơn tuần này",
 				"Hoạt động ngoại khóa",
 			],
 			path: async (params) => {
 				if (params.userInput === "Lịch học của bé") {
 					return "calendar";
 				}
-				if (params.userInput === "Thực đơn hàng ngày") {
+				if (params.userInput === "Thực đơn tuần này") {
 					return "menu";
 				}
 				if (params.userInput === "Hoạt động ngoại khóa") {
@@ -38,13 +39,15 @@ export const MyChatBot = () => {
 			},
 		},
 		calendar: {
-			message: "Bé học từ thứ Hai đến thứ Sáu, buổi sáng từ 7h30 đến 11h00 và buổi chiều từ 14h00 đến 16h30.\n" +
-				"Cuối tuần bé được nghỉ để vui chơi cùng gia đình nhé! \n Bạn muốn hỏi gì nữa không?",
+			component: () => {
+				return <MonthlyActivityCalendar />
+			},
+			message: "Trên đây là lịch học của bé tháng này! \n Bạn muốn hỏi gì nữa không?",
 			options: [
 				"Có",
 				"Không",
 				"Lịch học của bé",
-				"Thực đơn hàng ngày",
+				"Thực đơn tuần này",
 				"Hoạt động ngoại khóa",
 			],
 			path: async (params) => {
@@ -55,7 +58,7 @@ export const MyChatBot = () => {
 				if (params.userInput === "Lịch học của bé") {
 					return "calendar";
 				}
-				if (params.userInput === "Thực đơn hàng ngày") {
+				if (params.userInput === "Thực đơn tuần này") {
 					return "menu";
 				}
 				if (params.userInput === "Hoạt động ngoại khóa") {
@@ -69,12 +72,12 @@ export const MyChatBot = () => {
 			component: () => {
 				return <MenuOfTheDay/>
 			},
-			message: "Dưới đây là thực đơn hôm nay của bé: ban có muốn hỏi gì nữa không?",
+			message: "Dưới đây là thực đơn tháng này của bé! ban có muốn hỏi gì nữa không?",
 			options: [
 				"Có",
 				"Không",
 				"Lịch học của bé",
-				"Thực đơn hàng ngày",
+				"Thực đơn tuần này",
 				"Hoạt động ngoại khóa",
 			],
 			path: async (params) => {
@@ -85,7 +88,7 @@ export const MyChatBot = () => {
 				if (params.userInput === "Lịch học của bé") {
 					return "calendar";
 				}
-				if (params.userInput === "Thực đơn hàng ngày") {
+				if (params.userInput === "Thực đơn tuần này") {
 					return "menu";
 				}
 				if (params.userInput === "Hoạt động ngoại khóa") {
@@ -102,7 +105,7 @@ export const MyChatBot = () => {
 				"Có",
 				"Không",
 				"Lịch học của bé",
-				"Thực đơn hàng ngày",
+				"Thực đơn tuần này",
 				"Hoạt động ngoại khóa",
 			],
 			path: async (params) => {
@@ -113,7 +116,7 @@ export const MyChatBot = () => {
 				if (params.userInput === "Lịch học của bé") {
 					return "calendar";
 				}
-				if (params.userInput === "Thực đơn hàng ngày") {
+				if (params.userInput === "Thực đơn tuần này") {
 					return "menu";
 				}
 				if (params.userInput === "Hoạt động ngoại khóa") {
