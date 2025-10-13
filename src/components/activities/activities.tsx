@@ -76,7 +76,7 @@ export const Activities = () => {
 								năm
 								học thật vui, thật nhiều kỷ niệm đẹp!
 							</blockquote>
-							<p className="testimonial-name">&mdash; Cô Hiệp</p>
+							<p className="testimonial-name">&mdash; Cô Thu</p>
 						</figure>
 
 						<figure className="testimonial">
@@ -96,7 +96,7 @@ export const Activities = () => {
 								Cô rất mong sẽ cùng các con và quý phụ huynh tạo nên một năm học tràn đầy niềm vui, yêu
 								thương và những ký ức thật đẹp trong tuổi thơ.
 							</blockquote>
-							<p className="testimonial-name">&mdash; Cô Thu</p>
+							<p className="testimonial-name">&mdash; Cô Hiệp</p>
 						</figure>
 					</div>
 				</div>
